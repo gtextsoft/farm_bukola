@@ -1,0 +1,73 @@
+<!-- UI Components - Loader and Modals -->
+<!-- This file contains all reusable UI components -->
+
+<!-- App Loader -->
+<div id="app-loader" class="app-loader">
+    <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <p class="loader-message" id="loader-message">Loading...</p>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div id="success-modal" class="success-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="success-modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h2 class="success-modal-title" id="success-modal-title">Success!</h2>
+        <p class="success-modal-message" id="success-modal-message">Operation completed successfully.</p>
+        <button class="btn btn-primary" id="success-modal-close">Close</button>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div id="error-modal" class="error-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="error-modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8V12M12 16H12.01" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h2 class="error-modal-title" id="error-modal-title">Error</h2>
+        <p class="error-modal-message" id="error-modal-message">Something went wrong. Please try again.</p>
+        <button class="btn btn-primary" id="error-modal-close">Close</button>
+    </div>
+</div>
+
+<!-- Warning Modal -->
+<div id="warning-modal" class="warning-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="warning-modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 9V13M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h2 class="warning-modal-title" id="warning-modal-title">Warning</h2>
+        <p class="warning-modal-message" id="warning-modal-message">Please review this information carefully.</p>
+        <button class="btn btn-primary" id="warning-modal-close">Close</button>
+    </div>
+</div>
+
+<!-- Info Modal -->
+<div id="info-modal" class="info-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="info-modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16V12M12 8H12.01" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h2 class="info-modal-title" id="info-modal-title">Information</h2>
+        <p class="info-modal-message" id="info-modal-message">Here's some important information for you.</p>
+        <button class="btn btn-primary" id="info-modal-close">Close</button>
+    </div>
+</div>
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error | FarmMarket</title>
+    <meta name="description" content="We're experiencing technical difficulties. Please try again later.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components.css">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: var(--space-6);
+            background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-bg-primary) 100%);
+        }
+
+        .error-page-content {
+            text-align: center;
+            max-width: 600px;
+            display: grid;
+            align-items: center;
+            gap: var(--space-6);
+        }
+
+        .error-page-number {
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-error);
+            line-height: 1;
+            opacity: 0.2;
+        }
+
+        .error-page-title {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-neutral-900);
+            margin: 0;
+        }
+
+        .error-page-message {
+            font-size: var(--font-size-lg);
+            color: var(--color-neutral-600);
+            line-height: var(--line-height-relaxed);
+            margin: 0;
+        }
+
+        .error-page-actions {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+            .error-page-actions {
+                flex-direction: column;
+            }
+
+            .error-page-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <div class="navbar-brand">
+                    <a href="index.html" aria-label="FarmMarket Home">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="#0F7A4A" />
+                            <path d="M20 10L28 18H24V30H16V18H12L20 10Z" fill="white" />
+                        </svg>
+                        <span class="navbar-logo-text">FarmMarket</span>
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#why-us">Why Us</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="navbar-actions-item"><a href="login.html" class="navbar-icon-btn" aria-label="User account">
+                        <img src="icon/user-round.svg" alt="User account" width="20" height="20">
+                        <span>Account</span>
+                    </a></li>
+                    <li class="navbar-actions-item"><button class="navbar-icon-btn cart-icon-btn" id="cart-icon-btn" aria-label="Shopping cart">
+                        <img src="icon/shopping-cart.svg" alt="Shopping cart" width="20" height="20">
+                        <span class="cart-badge" id="cart-badge">0</span>
+                        <span>Cart</span>
+                    </button></li>
+                    <li class="navbar-actions-item"><button class="navbar-icon-btn search-icon-btn" id="search-btn" aria-label="Search">
+                        <img src="icon/search.svg" alt="Search" width="20" height="20">
+                        <span>Search</span>
+                    </button></li>
+                </ul>
+                <div class="navbar-actions">
+                    <a href="login.html" class="navbar-icon-btn" aria-label="User account">
+                        <img src="icon/user-round.svg" alt="User account" width="20" height="20">
+                    </a>
+                    <button class="navbar-icon-btn cart-icon-btn" id="cart-icon-btn" aria-label="Shopping cart">
+                        <img src="icon/shopping-cart.svg" alt="Shopping cart" width="20" height="20">
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </button>
+                    <button class="navbar-icon-btn search-icon-btn" id="search-btn" aria-label="Search">
+                        <img src="icon/search.svg" alt="Search" width="20" height="20">
+                    </button>
+                </div>
+                <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Error Page Content -->
+    <main class="error-page">
+        <div class="error-page-content">
+            <div class="error-page-number">500</div>
+            <h1 class="error-page-title">Server Error</h1>
+            <p class="error-page-message">
+                We're experiencing technical difficulties on our end. Our team has been notified and is working to fix
+                the issue. Please try again in a few moments.
+            </p>
+            <div class="error-page-actions">
+                <a href="index.html" class="btn btn-primary btn-lg">Go to Homepage</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="#0F7A4A" />
+                            <path d="M20 10L28 18H24V30H16V18H12L20 10Z" fill="white" />
+                        </svg>
+                        <span>FarmMarket</span>
+                    </div>
+                    <p class="footer-description">Connecting buyers with verified farmers for fresh, reliable produce.
+                        Your trusted marketplace for bulk sourcing.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="footer-social-link">
+                            <img src="icon/facebook.svg" alt="Facebook" width="24" height="24">
+                        </a>
+                        <a href="#" aria-label="Twitter" class="footer-social-link">
+                            <img src="icon/twitter.svg" alt="Twitter" width="24" height="24">
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="footer-social-link">
+                            <img src="icon/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#why-us">Why Us</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column" id="contact">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@farmersmarketplace.com">support@farmersmarketplace.com</a></li>
+                        <li><a href="tel:+18005551234">+1 800 555 1234</a></li>
+                        <li>Mon-Fri, 8am-6pm EST</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FarmMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button id="cart-close" class="cart-close-btn" aria-label="Close cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6L18 18" />
+                </svg>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div id="cart-empty" class="cart-empty">
+                <img src="icon/shopping-cart.svg" alt="Shopping cart" width="64" height="64">
+                <p>Your cart is empty</p>
+                <a href="products.html" class="btn btn-primary" onclick="closeCart()">Browse Products</a>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be rendered here -->
+            </div>
+        </div>
+        <div id="cart-footer" class="cart-footer">
+            <div class="cart-total">
+                <span class="cart-total-label">Total:</span>
+                <span class="cart-total-amount" id="cart-total">₦0.00</span>
+            </div>
+            <button class="btn btn-yellow btn-lg btn-block" onclick="handleCheckout()">Proceed to Checkout</button>
+            <button class="btn btn-ghost btn-block" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Search Sidebar -->
+    <div id="search-overlay" class="cart-overlay"></div>
+    <div id="search-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Search Products</h2>
+            <button id="search-close" class="cart-close-btn" aria-label="Close search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6L18 18" />
+                </svg>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div style="padding: var(--space-6); border-bottom: 1px solid var(--color-neutral-200);">
+                <div style="position: relative; display: flex; align-items: center;">
+                    <svg style="position: absolute; left: var(--space-4); color: var(--color-neutral-400); pointer-events: none;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21L16.65 16.65"/>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        style="width: 100%; padding: var(--space-3) var(--space-3) var(--space-3) calc(var(--space-4) + 20px + var(--space-2)); border: 1px solid var(--color-neutral-300); border-radius: var(--radius-md); font-size: var(--font-size-base); color: var(--color-neutral-900); background: var(--color-neutral-50); transition: all var(--duration-normal) var(--ease-out);"
+                        placeholder="Search products, locations, descriptions..."
+                        autocomplete="off"
+                        aria-label="Search products"
+                    >
+                </div>
+            </div>
+            <div id="search-results-count" style="display: none; font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-neutral-600); margin-bottom: var(--space-4); padding: var(--space-4) var(--space-4) var(--space-2); border-bottom: 1px solid var(--color-neutral-200);"></div>
+            <div id="search-no-results" class="cart-empty" style="display: none;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21L16.65 16.65"/>
+                </svg>
+                <p>No products found</p>
+                <span style="font-size: var(--font-size-sm); color: var(--color-neutral-500);">Try different keywords or browse all products</span>
+            </div>
+            <div id="search-results" style="display: none; gap: var(--space-4); padding: var(--space-4);">
+                <!-- Search results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Load UI Components (Loader & Modals) -->
+    <script src="load-ui-components.js"></script>
+    <!-- Products Data -->
+    <script src="products-data.js"></script>
+    <!-- UI Components Functions -->
+    <script src="ui-components.js"></script>
+    <!-- Navigation Script -->
+    <script src="navigation.js"></script>
+    <!-- Cart Script -->
+    <script src="cart.js"></script>
+    <!-- Search Script -->
+    <script src="search.js"></script>
+    <script>
+        // Handle checkout
+        function handleCheckout() {
+            if (cart.length === 0) {
+                showErrorModal('Empty Cart', 'Your cart is empty. Add some products before checkout.');
+                return;
+            }
+            showInfoModal('Checkout Coming Soon', 'Checkout functionality will be available soon. Thank you for your interest!');
+        }
+    </script>
+</body>
+
+</html>
