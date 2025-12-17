@@ -124,11 +124,13 @@ function clearSearchResults() {
 
 // Initialize search when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Add click handler for search icon
-    const searchIcon = document.querySelector('.search-icon-btn');
-    if (searchIcon) {
-        searchIcon.addEventListener('click', openSearch);
-    }
+    // Add click handler for search icon (handle both mobile and desktop buttons)
+    const searchIcons = document.querySelectorAll('.search-icon-btn, #search-btn');
+    searchIcons.forEach(searchIcon => {
+        if (searchIcon) {
+            searchIcon.addEventListener('click', openSearch);
+        }
+    });
     
     // Close search when clicking overlay
     const searchOverlay = document.getElementById('search-overlay');

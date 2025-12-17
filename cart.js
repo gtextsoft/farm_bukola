@@ -104,15 +104,18 @@ function getCartItemCount() {
 // Update cart count badge
 function updateCartCount() {
     const count = getCartItemCount();
-    const cartBadge = document.getElementById('cart-badge');
-    if (cartBadge) {
-        if (count > 0) {
-            cartBadge.textContent = count;
-            cartBadge.style.display = 'flex';
-        } else {
-            cartBadge.style.display = 'none';
+    // Update all cart badges (mobile and desktop)
+    const cartBadges = document.querySelectorAll('.cart-badge, #cart-badge');
+    cartBadges.forEach(cartBadge => {
+        if (cartBadge) {
+            if (count > 0) {
+                cartBadge.textContent = count;
+                cartBadge.style.display = 'flex';
+            } else {
+                cartBadge.style.display = 'none';
+            }
         }
-    }
+    });
 }
 
 // Update cart icon
@@ -233,11 +236,13 @@ function showCartNotification(message) {
 document.addEventListener('DOMContentLoaded', () => {
     initCart();
     
-    // Add click handlers for cart icon
-    const cartIcon = document.querySelector('.cart-icon-btn');
-    if (cartIcon) {
-        cartIcon.addEventListener('click', openCart);
-    }
+    // Add click handlers for cart icon (handle both mobile and desktop buttons)
+    const cartIcons = document.querySelectorAll('.cart-icon-btn, #cart-icon-btn');
+    cartIcons.forEach(cartIcon => {
+        if (cartIcon) {
+            cartIcon.addEventListener('click', openCart);
+        }
+    });
     
     // Close cart when clicking overlay
     const cartOverlay = document.getElementById('cart-overlay');
